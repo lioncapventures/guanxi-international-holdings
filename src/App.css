@@ -1,38 +1,759 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lilita+One&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Dirt&family=Viga&display=swap');
+/* font-family: "DM Sans", sans-serif; */
+
+/* Body styling */
+body {
+  font-family: "DM Sans", sans-serif;
+  background-color: rgb(151, 151, 151);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* #hero-section styling (background image) */
+#hero-section {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../src/components/images/home-background.png);
+  background-position: center;
+  background-size: cover;
+  position: relative; /* Position for the navbar to sit within */
+  color: white;
+  padding-top: 3rem; /* Ensure there is space for navbar */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Navbar styling */
+.navbar {
+  background-color: rgba(0, 0, 0, 0); /* Semi-transparent background for the navbar */
+  color: white;
+  padding: 1rem 2rem;
+  position: absolute; /* Absolute position relative to #hero-section */
+  top: 0;
+  left: 0;
+  right: 0;
+  /* width: 100%; */
+  z-index: 10; /* Ensure navbar is above other elements */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.navbar-logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+/* Links for large screens */
+.navbar-links {
+  display: flex;
+  gap: 1.5rem; /* Adjust spacing between links */
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+
+.navbar-links li a:hover {
+  color: #ccc;
+}
+
+/* Icons next to the hamburger menu */
+.navbar-icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-icons a {
+  color: rgba(255, 255, 255, 0.726);
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.navbar-icons a:hover {
+  color: #ccc;
+}
+
+/* Get Started Button */
+.get-started {
+  background: linear-gradient(to right, #686868, #131313);
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  margin-left: 2rem; /* Adjust spacing from links */
+}
+
+.get-started:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Hamburger Menu */
+.navbar-hamburger {
+  display: none;
+  font-size: 1.2rem;
+  cursor: pointer;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Dropdown menu for small screens */
+.navbar-menu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.267);
+  backdrop-filter: blur(10px);
+  /* padding: 1rem; */
+  z-index: 10;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar-menu.active {
+  display: flex;
+}
+
+.navbar-links {
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown menu links styling */
+.navbar-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-menu ul li {
+  margin: 0.5rem 0;
+}
+
+.navbar-menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  display: block;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-menu ul li a:hover {
+  background-color: #575757;
+  color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 862px) {
+  .navbar-links {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  .navbar-logo a {
+    font-size: 1.2rem;
+  }
+  .navbar-icons {
+    display: flex;
+  }
+
+  .navbar-actions {
+    display: none;
+  }
+
+  .navbar-hamburger {
+    display: block;
   }
 }
+@media (min-width: 862px) {
+  .navbar-menu ul {
+    display: none;
+  }
+  .navbar-menu{
+    display: none;
+  }
+}
+@media (max-width: 486px) {
+  .navbar-icons {
+    display: flex;
+    gap: 10px;
+  }
+}
+/* HOME CONTENT */
+.home-container{
+  /* width: 100%; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  /* background-color: aqua; */
+  /* margin-top: -45px; */
+  padding-left: 20px;
+}
+.home-content{
+  width: 100%;
+  /* background-color: aqua; */
+  h1 {
+    /* line-height: 40px; */
+    width: 50%;
+    font-weight: bolder;
+    font-size: 50px;
+    background-image: linear-gradient(to right, #ffffff, #868686,#b3b3b3);
+    background-clip: text; /* Standard property */
+    -webkit-background-clip: text; /* WebKit-based browsers */
+    color: transparent; /* Make the text color transparent so the gradient shows */
+    @media (max-width: 468px) {
+      width: 80%;
+    }
+        @media (max-width: 438px) {
+      width: 80%;
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+  }
+  p{
+    font-size: 14px;
+    margin-top: -40px;
+    color: #8f8f8f;
+    @media (max-width: 468px) {
+      width: 50%;
+      color: #b3b3b3;
+      line-height: 15px;
+      margin-top: 10px;
+    }
+  }
+  button{
+    margin-top: 30px;
+    border: none;
+    width: 150px;
+    height: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.527);
+    a{
+      text-decoration: none;
+      color: rgb(20, 20, 20);
+      font-weight: bold;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+  }  
+}
+#about-section{
+  width: 100%;
+  /* height: 100vh; */
+  background-color: rgb(0, 0, 0);
+  float: left;
+}
+.about-container{
+  width: auto;
+  height: 100%;
+  padding: 20px;
+  /* background-color: aqua; */
+}
+
+.slick-dots, .slick-prev, .slick-next {
+  display: none !important;
+}
+.services-cards-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  justify-content: center;
+  align-items: stretch; /* Ensures all cards have equal height */
+  gap: 20px; /* Spacing between cards */
+  margin-top: 30px;
+  padding: 20px; /* Adds spacing around the cards */
+}
+
+.card {
+  background-color: #ffffff18;
+  backdrop-filter: blur(2px);
+  padding: 20px; /* Adjust for better spacing inside cards */
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.63);
+  flex: 1 1 calc(25% - 40px); /* Adjust card width to fit 4 in a row with gaps */
+  max-width: 300px; /* Ensures cards don’t get too large */
+  display: flex;
+  flex-direction: column; /* Ensures consistent spacing for content */
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover{
+  background-color: rgba(238, 238, 238, 0.178);
+}
+
+.card h3 {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+  text-shadow: 0px 0px 40px rgba(255, 255, 255, 0.596);
+  margin-bottom: 10px;
+  text-align: center; /* Centers the heading */
+}
+
+.card ul {
+  padding: 0;
+}
+
+.card ul li {
+  color: #afafaf;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .card {
+    flex: 1 1 calc(33.33% - 40px); /* Adjust to fit 3 cards in a row */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 calc(50% - 40px); /* Adjust to fit 2 cards in a row */
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 calc(100% - 40px); /* Full width for smaller screens */
+  }
+}
+
+.guanxi-section{
+  width: 100%;
+  /* height: 90vh; */
+  background-color: #000000;
+  float: left;
+}
+/* General container styling */
+.container {
+  position: relative; /* Creates the positioning context */
+  height: 80vh; /* Ensure it covers the full viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.large-text {
+  font-size: 200px;
+  font-weight: bold;
+  margin-top: -280px;
+  letter-spacing: 0.1em;
+  user-select: none;
+  position: relative;
+  z-index: 1; /* Ensure it's behind the content */
+  background-image: linear-gradient(to right, #ffffff, #868686,#000000);
+  background-clip: text; /* Standard property */
+  -webkit-background-clip: text; /* WebKit-based browsers */
+  color: transparent; /* Make the text color transparent so the gradient shows */
+  @media (max-width:801px) {
+    font-size: 190px;
+  }
+  @media (max-width:760px) {
+    font-size: 150px;
+  }
+  @media (max-width:615px) {
+    font-size: 120px;
+  }
+  @media (max-width:615px) {
+    font-size: 100px;
+  }
+  @media (max-width:418px) {
+    font-size: 80px;
+  }
+  @media (max-width:320px) {
+    font-size: 60px;
+  }
+}
+
+.content-wrapper {
+  background-color: rgba(0, 0, 0, 0.322);
+  backdrop-filter: blur(10px);
+  position: absolute; /* Positions it relative to .container */
+  top: 50%; /* Centers vertically */
+  left: 50%; /* Centers horizontally */
+  transform: translate(-50%, -50%); /* Aligns the center point */
+  z-index: 2; /* Brings it in front of .large-text */
+  text-align: center;
+  height: 250px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+    /* Add fade effect to the bottom */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0));
+    -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0));
+    mask-size: 100% 150%; /* Ensures the gradient extends to fade out */
+    mask-position: top;
+    -webkit-mask-size: 100% 150%;
+    -webkit-mask-position: top;
+    @media (max-width:579px) {
+      width: 70%;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+}
+
+.subheading {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  @media (max-width:353px) {
+    font-size: 12px;
+  }
+}
+
+.description {
+  max-width: 28rem;
+  color: #a0aec0;
+  margin: 0 auto;
+  @media (max-width:353px) {
+    font-size: 12px;
+  }
+}
+
+.back-home {
+  background-color: rgb(94, 94, 94);
+  box-shadow:  0px 0px 10px rgba(0, 0, 0, 0.555);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 9999px;
+  display: inline-block;
+  margin-top: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  @media (max-width: 612px) {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+}
+
+.back-home:hover {
+  background-color: #181818;
+}
+/* General Section Styling */
+.container2 {
+  max-width: 1000px;
+  background-color: #000000;
+  margin: 0 auto;
+  padding: 0 16px;
+  margin-top: 8rem; /* Adjust as necessary */
+}
+
+/* Wrapper for content */
+.content-wrapper2 {
+  background-color: rgba(34, 34, 34, 0.5); /* Semi-transparent gray */
+  border-radius: 30px;
+  padding: 3rem;
+  position: relative;
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+}
+
+/* Text content inside the wrapper */
+.text-content {
+  max-width: 600px;
+}
+
+.text-content h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.text-content p {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Call-to-action button */
+.cta-button {
+  background-color: #222222; /* Dark gray */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #333333; /* Slightly lighter gray */
+}
+
+/* Background circle for decorative effect */
+.background-circle {
+  position: absolute;
+  bottom: -5rem;
+  right: -5rem;
+  width: 24rem;
+  height: 24rem;
+  background-color: rgba(0, 122, 255, 0.1); /* Light blue */
+  border-radius: 50%;
+  filter: blur(48px);
+}
+.background-circle2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 24rem;
+  height: 24rem;
+  background-color: rgba(157, 203, 255, 0.1); /* Light blue */
+  border-radius: 50%;
+  filter: blur(48px);
+}
+.background-circle-white{
+    position: absolute;
+    bottom: -5rem;
+    right: -5rem;
+    width: 10rem;
+    height: 24rem;
+    background-color: rgba(255, 255, 255, 0.1); /* Light blue */
+    border-radius: 50%;
+    filter: blur(48px);
+}
+.background-circle-white2{
+  position: absolute;
+  bottom: -5rem;
+  right: -5rem;
+  width: 30rem;
+  height: 24rem;
+  background-color: rgba(0, 0, 0, 0.1); /* Light blue */
+  border-radius: 50%;
+  filter: blur(48px);
+}
+.background-circle-white3{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30rem;
+  height: 24rem;
+  background-color: rgba(255, 255, 255, 0.1); /* Light blue */
+  border-radius: 50%;
+  filter: blur(48px);
+}
+#Call-to-action{
+ width: 100%;
+ padding-bottom: 20px;
+ background-color: #000000;
+}
+
+/* FOOTER STYLING */
+footer{
+  width: 100%;
+  padding-bottom: 30px;
+  background-color: #000000;
+  float: left;
+}
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem 1rem;
+  margin-top: 8rem;
+  color: #e5e5e5;
+  background-color: rgba(39, 39, 39, 0.322);
+  backdrop-filter: blur(24px);
+  border-radius: 30px;
+  overflow: hidden;
+  @media (max-width:1252px) {
+    border-radius: 0;
+  }
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.brand-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.brand-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: rgba(0, 122, 255, 0.2);
+  border-radius: 50%;
+}
+
+.brand-name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.brand-description {
+  color: #a3a3a3;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.footer-heading {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  display: block;
+  color: #a3a3a3;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+}
+
+.footer-bottom p {
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  color: #a3a3a3;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: #a3a3a3;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+}
+.container-pages{
+  position: relative; /* Creates the positioning context */
+  height: 100vh; /* Ensure it covers the full viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#FAQs-section{
+  width: 100%;
+  padding-bottom: 30px;
+  background-color: #000000;
+  float: left;
+  @media (max-width:506px) {
+    overflow: hidden;
+  }
+}
+.FAQs-heading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
+  h1{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-family: "DM Sans", sans-serif;
+  }
+  .small-heading{
+    color: #818181;
+    text-align: center;
+    width: 80%;
+    a{
+      text-decoration: none;
+      font-weight: bolder;
+      color: #cfcfcf;
+    }
+  }
+}
+.question{
+  background-color: rgba(39, 39, 39, 0.322);
+  backdrop-filter: blur(24px);
+  padding: 2px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+  p{
+    color: white;
+  }
+  .review-button{
+    font-size: 18px;
+  }
+}
+.questions-wrapper{
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
+  @media (max-width:1040px) {
+    width: 70%;
+  }
+  @media (max-width:732px) {
+    width: 80%;
+  }
+  @media (max-width:646px) {
+    width: 90%;
+  }
+}
+
+
+.answer {
+  margin-top: 0;
+  padding: 10px 20px;
+  color: rgb(85, 85, 85);
+  background-color: rgba(39, 39, 39, 0.322);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  backdrop-filter: blur(24px);
+  animation: dropdown 0.3s ease-in-out;
+}
+
+@keyframes dropdown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
