@@ -361,7 +361,7 @@ body {
   user-select: none;
   position: relative;
   z-index: 1; /* Ensure it's behind the content */
-  background-image: linear-gradient(to right, #ffffff, #868686,#000000);
+  background-image: linear-gradient(to right, #ffffff, #868686,#383838);
   background-clip: text; /* Standard property */
   -webkit-background-clip: text; /* WebKit-based browsers */
   color: transparent; /* Make the text color transparent so the gradient shows */
@@ -738,7 +738,7 @@ footer{
 .answer {
   margin-top: 0;
   padding: 10px 20px;
-  color: rgb(85, 85, 85);
+  color: rgb(180, 180, 180);
   background-color: rgba(39, 39, 39, 0.322);
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
