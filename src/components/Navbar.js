@@ -27,7 +27,7 @@ const Navbar = () => {
 
         {/* Icons and Hamburger menu */}
         <div className="navbar-icons">
-          <a href="tel:+1234567890"><i className="fas fa-phone"></i></a>
+          <a href="tel:+263772724514"><i className="fas fa-phone"></i></a>
           <a href="https://maps.google.com"><i className="fas fa-map-marker-alt"></i></a>
           <a href="https://facebook.com"><i className="fab fa-facebook"></i></a>
           <a href="https://linkedin.com"><i className="fab fa-linkedin"></i></a>
@@ -49,7 +49,7 @@ const Navbar = () => {
 
         {/* Get Started button */}
         <div className="navbar-actions">
-          <button className="get-started">Get started</button>
+         <a href="#service"><button className="get-started">Get started</button></a>
         </div>
       </div>
     </nav>

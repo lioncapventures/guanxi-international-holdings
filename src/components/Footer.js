@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
 <footer>
-<div class="footer-container">
+<div class="footer-container" id='contact'>
 <div class="background-circle2"></div>
   <div class="footer-grid">
     <div>
@@ -19,45 +19,39 @@ const Footer = () => {
     <div>
       <h3 class="footer-heading">Main pages</h3>
       <div class="footer-links">
-        <a href="/home-v1">Home V1</a>
-        <a href="/home-v2">Home V2</a>
-        <a href="/home-v3">Home V3</a>
-        <a href="/about">About</a>
-        <a href="/features">Features</a>
-        <a href="/integrations">Integrations</a>
-        <a href="/integration-single">Integration single</a>
+        <a href="#hero-section">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#products">Product</a>
       </div>
     </div>
 
     <div>
-      <h3 class="footer-heading">More Webflow Templates</h3>
+      <h3 class="footer-heading">Services</h3>
       <div class="footer-links">
-        <a href="/blog-v1">Blog V1</a>
-        <a href="/blog-v2">Blog V2</a>
-        <a href="/blog-v3">Blog V3</a>
-        <a href="/blog-post">Blog post</a>
-        <a href="/careers">Careers</a>
-        <a href="/career-single">Career single</a>
-        <a href="/pricing">Pricing</a>
+        <a href="#service">Customization</a>
+        <a href="#service">Consulting Services</a>
+        <a href="#service">Technical Support</a>
+        <a href="#service">Assembly</a>
       </div>
     </div>
 
     <div>
-      <h3 class="footer-heading">Utility pages</h3>
+      <h3 class="footer-heading">Get In Touch</h3>
       <div class="footer-links">
-        <a href="/start-here">Start here</a>
-        <a href="/styleguide">Styleguide</a>
-        <a href="/password-protected">Password protected</a>
-        <a href="/404">Lorem</a>
-        <a href="/licenses">Licenses</a>
-        <a href="/changelog">Changelog</a>
+        <a href="https://maps.google.com">5 Benmore Road,</a>
+        <a href="https://maps.google.com">Sandton, SA</a>
+        <a href="https://maps.google.com">5031 Crowhill Views,</a>
+        <a href="https://maps.google.com">Harare, ZW</a>
+        <a href="tel:+263772724514">+263 772 72 4514</a>
+        <a href="tel:+27646394007">+27 646 39 4007</a>
       </div>
     </div>
   </div>
 
   <div class="footer-bottom">
     <p class="footer-copyright">
-      Copyright © 2024| Designed by Wisdom Balicholo
+      Copyright © 2024| Designed and Developed by<a href="https://www.lioncapventures.com/"> Lioncap Ventures</a>
     </p>
     <div className="social-icons">
   <a href="https://facebook.com" aria-label="Facebook">Facebook</a>

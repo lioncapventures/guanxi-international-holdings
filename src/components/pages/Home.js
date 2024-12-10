@@ -16,7 +16,7 @@ const Home = () => {
         <h1>Unifying Trade through Tech</h1>
         <p>We are a company that specializes in tech hardware import & export</p>
         <button>
-        <a href="https://your-external-url.com" target="_blank" rel="noopener noreferrer">Get Started</a>
+        <a href="#service" >Get Started</a> {/* target="_blank" rel="noopener noreferrer" */}
         </button>
       </div>
       </div>
@@ -35,7 +35,7 @@ const Home = () => {
           </ul>
           <div class="background-circle-white"></div>
         </div>
-        <div className='card'>
+        <div className='card' id='service'>
           <h3>Customization and Assembly</h3>
           <ul>
             <li>Custom-built Systems: Providing custom-configured PCs, servers, or other hardware tailored to client specifications.</li>
@@ -84,7 +84,7 @@ const Home = () => {
       </div>
       </div>
     </section>
-    <section className='guanxi-section'>
+    <section className='guanxi-section' id='about'>
     <div class="container">
   <div class="large-text">Guanxi</div>
   <div class="content-wrapper">
@@ -98,14 +98,14 @@ const Home = () => {
     </section>
     <section id='Call-to-action'>
   <div class="container2">
-  <div class="content-wrapper2">
+  <div class="content-wrapper2" id='products'>
     <div class="text-content">
       <h2>Try the Guanxi International Holdings of the future, today.</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur in aenean a in tempor varius
         amet aliquam suspendisse et tortor orci natoque dui.
       </p>
-      <a href="/get-started" class="cta-button">Get started →</a>
+      <a href="#about" class="cta-button">Get started →</a>
     </div>
     <div class="background-circle"></div>
   </div>

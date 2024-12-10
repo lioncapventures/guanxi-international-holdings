@@ -9,6 +9,9 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
 
 /* #hero-section styling (background image) */
 #hero-section {
@@ -97,7 +100,7 @@ body {
 
 .get-started:hover {
   background-color: white;
-  color: black;
+  color: rgb(189, 189, 189);
 }
 
 /* Hamburger Menu */
@@ -598,7 +601,7 @@ footer{
 .brand-icon {
   width: 1.5rem;
   height: 1.5rem;
-  background-color: rgba(0, 122, 255, 0.2);
+  background-color: rgb(255, 255, 255);
   border-radius: 50%;
 }
 
@@ -620,6 +623,7 @@ footer{
 }
 
 .footer-links a {
+  position: relative;
   display: block;
   color: #a3a3a3;
   text-decoration: none;
@@ -644,6 +648,10 @@ footer{
   font-size: 0.875rem;
   margin-bottom: 1rem;
   color: #a3a3a3;
+}
+.footer-copyright a{
+  color: #ff9100;
+  text-decoration: none;
 }
 
 .social-icons {
