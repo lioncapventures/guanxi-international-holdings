@@ -12,7 +12,9 @@ const Footer = () => {
         <span class="brand-name">Guanxi</span>
       </div>
       <p class="brand-description">
-        Lorem ipsum dolor sit amet consectetur in aenean a in.
+        Join the growing network of businesses that rely on us for efficient,
+        reliable tech hardware solutions. Together, we can create smarter systems
+        and seamless supply chains.
       </p>
     </div>
 
@@ -39,19 +41,17 @@ const Footer = () => {
     <div>
       <h3 class="footer-heading">Get In Touch</h3>
       <div class="footer-links">
-        <a href="https://maps.google.com">5 Benmore Road,</a>
-        <a href="https://maps.google.com">Sandton, SA</a>
-        <a href="https://maps.google.com">5031 Crowhill Views,</a>
-        <a href="https://maps.google.com">Harare, ZW</a>
-        <a href="tel:+263772724514">+263 772 72 4514</a>
-        <a href="tel:+27646394007">+27 646 39 4007</a>
+        <a href="https://maps.google.com">12.125 Samora Machel,</a>
+        <a href="https://maps.google.com">Matola,</a>
+        <a href="tel:+258861058118">+258 861058118</a>
+        <a href="tel:+258870210002">+258 870210002</a>
       </div>
     </div>
   </div>
 
   <div class="footer-bottom">
     <p class="footer-copyright">
-      Copyright © 2024| Designed and Developed by<a href="https://www.lioncapventures.com/"> Lioncap Ventures</a>
+      Copyright © 2024| All rights reserved<a href="/"> Guanxi International Holdings</a>
     </p>
     <div className="social-icons">
   <a href="https://facebook.com" aria-label="Facebook">Facebook</a>

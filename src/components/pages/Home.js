@@ -54,33 +54,9 @@ const Home = () => {
           </ul>
         </div>
 
-        <div className='card'>
-          <h3>Technical Support and Maintenance</h3>
-          <ul>
-            <li>Installation and Setup: Offering onsite installation for hardware like servers, networking equipment, and industrial machinery.</li>
-            <li>Repair Services: Providing repairs and servicing for damaged or malfunctioning hardware.</li>
-            <li>Warranty Management: Facilitating manufacturer warranty claims or replacements.</li>
-          </ul>
-        </div>
-
-        <div className='card'>
-          <h3>Consulting Services</h3>
-          <ul>
-            <li>Hardware Selection Guidance: Helping businesses choose the right hardware for their specific needs.</li>
-            <li>Tech Upgrades: Advising on and supplying hardware upgrades for legacy systems.</li>
-            <li>Cost Analysis: Providing cost-effective solutions for tech procurement and deployment.</li>
-          </ul>
-        </div>
-
-        <div className='card'>
-        <div class="background-circle-white"></div>
-          <h3>Consulting Services</h3>
-          <ul>
-            <li>Hardware Selection Guidance: Helping businesses choose the right hardware for their specific needs.</li>
-            <li>Tech Upgrades: Advising on and supplying hardware upgrades for legacy systems.</li>
-            <li>Cost Analysis: Providing cost-effective solutions for tech procurement and deployment.</li>
-          </ul>
-        </div>
+      </div>
+      <div className='services-button'>
+        <a href="/services" class="cta-button">View More →</a>
       </div>
       </div>
     </section>
@@ -90,9 +66,10 @@ const Home = () => {
   <div class="content-wrapper">
     <h2 class="subheading">Tech Hardware import & Export</h2>
     <p class="description">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit arcu cras posuere gravida neque felis a ullamcorper interdum.
+      At Guanxi International Holdings, we bridge the gap between manufacturers
+      and businesses by providing top-notch tech hardware solutions.
     </p>
-    <a href="/" class="back-home">Read More →</a>
+    <a href="/about" class="back-home">Read More →</a>
   </div>
 </div>
     </section>
@@ -102,10 +79,11 @@ const Home = () => {
     <div class="text-content">
       <h2>Try the Guanxi International Holdings of the future, today.</h2>
       <p>
-        Lorem ipsum dolor sit amet consectetur in aenean a in tempor varius
-        amet aliquam suspendisse et tortor orci natoque dui.
+        Whether it`s sourcing cutting-edge components or delivering custom-built systems,
+        we ensure efficiency, reliability and unmatched customer service at every step of the 
+        process.
       </p>
-      <a href="#about" class="cta-button">Get started →</a>
+      <a href="/products" class="cta-button">Our Products →</a>
     </div>
     <div class="background-circle"></div>
   </div>
@@ -116,32 +94,32 @@ const Home = () => {
           <h1>Frequently Asked Questions</h1>
           <p className='small-heading'>
             If you can't find an answer here, check out the{" "}
-            <a href="/get-started" className="link">community forum</a>, reach out on{" "}
-            <a href="/get-started" className="link">Twitter</a>, or write to{" "}
-            <a href="mailto:support@pirsch.io" className="link">support@pirsch.io</a>.
+            <a href="/get-started" className="link">community forum</a>, reach out our{" "}
+            <a href="/" className="link">Contact Info</a>, or write to{" "}
+            <a href="mailto:guanxi@gmail.com" className="link">guanxi@gmail.com</a>.
           </p>
         </div>
         <div className='questions-wrapper'>
-          <div className="background-circle-white3"></div>
-          {[
-            "Lorem amet aliquam suspendisse et tortor orci natoque dui?",
-            "Can I integrate your service with my existing setup?",
-            "How secure is the hardware during transit?",
-            "What is your warranty policy?",
-          ].map((question, index) => (
-            <React.Fragment key={index}>
-              <div className='question' onClick={() => toggleAnswer(index)}>
-                <p>{question}</p>
-                <p className='review-button'>{activeIndex === index ? "−" : "+"}</p>
-              </div>
-              {activeIndex === index && (
-                <div className="answer">
-                  <p>This is the answer to: {question}</p>
-                </div>
-              )}
-            </React.Fragment>
-          ))}
+  <div className="background-circle-white3"></div>
+  {[
+    { question: "What services do you offer?", answer: "We offer sourcing, exporting, customization, logistics, and consulting services for tech hardware." },
+    { question: "Can I integrate your service with my existing setup?", answer: "Yes, we provide custom solutions and technical support to integrate our services with your current systems." },
+    { question: "How secure is the hardware during transit?", answer: "We ensure secure packaging and use reliable shipping partners to guarantee safe delivery." },
+    { question: "What is your warranty policy?", answer: "We facilitate manufacturer warranty claims and offer repair services for eligible products." },
+  ].map((item, index) => (
+    <React.Fragment key={index}>
+      <div className='question' onClick={() => toggleAnswer(index)}>
+        <p>{item.question}</p>
+        <p className='review-button'>{activeIndex === index ? "−" : "+"}</p>
+      </div>
+      {activeIndex === index && (
+        <div className="answer">
+          <p>{item.answer}</p>
         </div>
+      )}
+    </React.Fragment>
+  ))}
+</div>
       </section>
     </>
   );

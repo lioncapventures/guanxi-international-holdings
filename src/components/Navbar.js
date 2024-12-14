@@ -27,7 +27,7 @@ const Navbar = () => {
 
         {/* Icons and Hamburger menu */}
         <div className="navbar-icons">
-          <a href="tel:+263772724514"><i className="fas fa-phone"></i></a>
+          <a href="tel:+258861058118"><i className="fas fa-phone"></i></a>
           <a href="https://maps.google.com"><i className="fas fa-map-marker-alt"></i></a>
           <a href="https://facebook.com"><i className="fab fa-facebook"></i></a>
           <a href="https://linkedin.com"><i className="fab fa-linkedin"></i></a>

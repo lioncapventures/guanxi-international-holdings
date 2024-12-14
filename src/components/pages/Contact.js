@@ -6,11 +6,13 @@ const Contact = () => {
     <div class="container-pages">
   <div class="large-text">Guanxi</div>
   <div class="content-wrapper">
-    <h2 class="subheading">Page Under Constructin</h2>
+    <h2 class="subheading">Get In Touch</h2>
     <p class="description">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit arcu cras posuere gravida neque felis a ullamcorper interdum.
+      At Guanxi International Holdings, we value every inquiry and look forward to assisting
+      you. Whether you have questions about our products and services, need support, or are 
+      interested in partnership opportunities, we're here to help!
     </p>
-    <a href="/" class="back-home">Home Page →</a>
+    <a href="mailto:guanxi@gmail.com" class="back-home">Email Us →</a>
   </div>
 </div>
     </section>
