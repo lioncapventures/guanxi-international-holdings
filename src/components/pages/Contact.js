@@ -12,7 +12,7 @@ const Contact = () => {
       you. Whether you have questions about our products and services, need support, or are 
       interested in partnership opportunities, we're here to help!
     </p>
-    <a href="mailto:guanxi@gmail.com" class="back-home">Email Us →</a>
+    <a href="mailto:info@guanxiholdings.com" class="back-home">Email Us →</a>
   </div>
 </div>
     </section>

@@ -96,7 +96,7 @@ const Home = () => {
             If you can't find an answer here, check out the{" "}
             <a href="/get-started" className="link">community forum</a>, reach out our{" "}
             <a href="/" className="link">Contact Info</a>, or write to{" "}
-            <a href="mailto:guanxi@gmail.com" className="link">guanxi@gmail.com</a>.
+            <a href="mailto:info@guanxiholdings.com" className="link">guanxi@gmail.com</a>.
           </p>
         </div>
         <div className='questions-wrapper'>
