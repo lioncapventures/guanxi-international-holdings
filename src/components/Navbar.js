@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t, i18n } = useTranslation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleLanguage = () => {
+    const newLanguage = i18n.language === 'en' ? 'pt' : 'en';
+    i18n.changeLanguage(newLanguage);
+    localStorage.setItem('preferredLanguage', newLanguage);
   };
 
   return (
@@ -18,11 +26,11 @@ const Navbar = () => {
 
         {/* Navigation links (displayed on large screens) */}
         <ul className="navbar-links">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/products">Products</Link></li>
-          <li><Link to="/services">Services</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          <li><Link to="/">{t('nav.home')}</Link></li>
+          <li><Link to="/about">{t('nav.about')}</Link></li>
+          <li><Link to="/products">{t('nav.products')}</Link></li>
+          <li><Link to="/services">{t('nav.services')}</Link></li>
+          <li><Link to="/contact">{t('nav.contact')}</Link></li>
         </ul>
 
         {/* Icons and Hamburger menu */}
@@ -39,17 +47,25 @@ const Navbar = () => {
         {/* Dropdown menu for small screens */}
         <div className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
           <ul>
-            <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
-            <li><Link to="/about" onClick={toggleMenu}>About</Link></li>
-            <li><Link to="/products" onClick={toggleMenu}>Products</Link></li>
-            <li><Link to="/services" onClick={toggleMenu}>Services</Link></li>
-            <li><Link to="/contact" onClick={toggleMenu}>Contact</Link></li>
+            <li><Link to="/" onClick={toggleMenu}>{t('nav.home')}</Link></li>
+            <li><Link to="/about" onClick={toggleMenu}>{t('nav.about')}</Link></li>
+            <li><Link to="/products" onClick={toggleMenu}>{t('nav.products')}</Link></li>
+            <li><Link to="/services" onClick={toggleMenu}>{t('nav.services')}</Link></li>
+            <li><Link to="/contact" onClick={toggleMenu}>{t('nav.contact')}</Link></li>
           </ul>
         </div>
 
+        {/* Language toggle button */}
+        <button 
+          className="language-toggle"
+          onClick={toggleLanguage}
+        >
+          {i18n.language === 'en' ? '🇵🇹 PT' : '🇬🇧 EN'}
+        </button>
+
         {/* Get Started button */}
         <div className="navbar-actions">
-         <a href="#service"><button className="get-started">Get started</button></a>
+          <a href="#service"><button className="get-started">{t('nav.getStarted')}</button></a>
         </div>
       </div>
     </nav>
