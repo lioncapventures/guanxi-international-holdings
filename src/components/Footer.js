@@ -40,6 +40,7 @@ const Footer = () => {
               <Link to="/services">{t('home.services.assembly.title') || 'Assembly'}</Link>
             </div>
           </div>
+          
 
           <div>
             <h3 className="footer-heading">{t('footer.getInTouch') || 'Get In Touch'}</h3>
