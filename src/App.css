@@ -343,7 +343,26 @@ html{
   font-size: 14px;
   margin-bottom: 8px;
 }
-
+/* STARLINK IMAGES CARDS */
+.starlink-card {
+  background-image: url(../src/components/images/starlink-2.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  padding: 20px; /* Adjust for better spacing inside cards */
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.63);
+  width: 300px;
+  height: 300px;
+}
+.starlink2{
+  background-image: url(../src/components/images/starlink3.jpeg);
+}
+.starlink1{
+  background-image: url(../src/components/images/starlink1.jpeg);
+}
 /* Responsive design */
 @media (max-width: 1024px) {
   .card {
@@ -734,7 +753,7 @@ footer{
 }
 .container-pages{
   /* position: relative; Creates the positioning context */
-  height: 100vh; /* Ensure it covers the full viewport */
+  height: 100vh;/* Ensure it covers the full viewport */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -886,4 +905,11 @@ footer{
 
 .language-toggle:hover {
   background: rgba(255, 255, 255, 0.1);
+}
+.contact-btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
 }

@@ -5,6 +5,7 @@ const Contact = () => {
   const { t } = useTranslation();
 
   return (
+<>
     <section className='guanxi-section'>
       <div className="container-pages">
         <div className="large-text">Guanxi</div>
@@ -16,12 +17,18 @@ const Contact = () => {
               "At Guanxi International Holdings, we value every inquiry and look forward to assisting you. Whether you have questions about our products and services, need support, or are interested in partnership opportunities, we're here to help!"
             )}
           </p>
-          <a href="mailto:info@guanxiholdings.com" className="back-home">
-            {t('contact.email', 'Email Us')} →
-          </a>
+          <div className="contact-btns">
+           <a href="mailto:info@guanxiholdings.com" className="back-home">
+             {t('contact.email', 'Email Us')} →
+           </a>
+           <a href="https://wa.link/x1ctw0" className="back-home">
+            {t('contact.whatsApp', 'WhatsApp')} →
+           </a>
+          </div>
         </div>
       </div>
     </section>
+</>
   );
 };
 

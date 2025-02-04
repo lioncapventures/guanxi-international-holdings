@@ -72,6 +72,22 @@ const Home = () => {
         </div>
       </section>
 
+      <section id='about-section'>
+        <div className='about-container'>
+          <div className='services-cards-wrapper'>
+            <div className='starlink-card'></div>
+
+            <div className='starlink-card starlink2'></div>
+
+            <div className='starlink-card starlink1'></div>
+
+          </div>
+          <div className='services-button'>
+            <a href="https://wa.link/x1ctw0" className="cta-button">{t('WhatsApp') || 'WhatsApp'}</a>
+          </div>
+        </div>
+      </section>
+
       <section id='Call-to-action'>
         <div className="container2">
           <div className="content-wrapper2" id='products'>
